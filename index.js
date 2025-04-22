@@ -3,8 +3,12 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const dbConnection = require("./config/db");
 const categoryRoute = require("./routers/categoryRoute");
+const subCategoryRoute = require("./routers/subCategoryRoute");
+const brandRoute = require("./routers/brandRoute");
+const productRoute = require("./routers/productRoute");
 const ApiError = require("./utils/apiError");
 const globalError = require("./middlewares/errorMiddleware");
+const qs = require("qs");
 
 dotenv.config({ path: "config.env" });
 
@@ -21,8 +25,16 @@ if (process.env.NODE_ENV === "development") {
 }
 app.use(express.json());
 
+app.set("query parser", (str) => qs.parse(str));
+
 // Routes
 app.use("/api/categories", categoryRoute);
+
+app.use("/api/subcategories", subCategoryRoute);
+
+app.use("/api/brands", brandRoute);
+
+app.use("/api/products", productRoute);
 
 app.all("/{*splat}", (req, res, next) => {
   next(new ApiError(`Con't find this route ${req.originalUrl}`, 400));
