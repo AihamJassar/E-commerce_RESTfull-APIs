@@ -261,15 +261,41 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"tools\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"type": "text",
+									"uuid": "76661fc9-cdbc-4f02-938f-db83a10e604d",
+									"value": "new brand"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"uuid": "87e12cc4-6f80-4a8a-8cbf-43f9bc62a1b3",
+									"src": "postman-cloud:///1f01fba6-9edd-4de0-a8b8-d98e555ff650"
 								}
-							}
+							]
 						},
-						"url": "localhost:8000/api/brands"
+						"url": {
+							"raw": "localhost:3000/api/brands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"brands"
+							],
+							"query": [
+								{
+									"key": "image",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
