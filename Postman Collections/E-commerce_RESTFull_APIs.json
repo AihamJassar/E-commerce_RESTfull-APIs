@@ -512,6 +512,126 @@
 			"id": "9759f088-524f-4a5c-a992-09c39115e367"
 		},
 		{
+			"name": "Subcategories Copy",
+			"item": [
+				{
+					"name": "Create subcategory",
+					"id": "612b3326-fd04-470f-823b-c886a4e0f01a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"smats watches\",\r\n    \"category\": \"67f8363c08985b916d9a47de\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/subcategories"
+					},
+					"response": []
+				},
+				{
+					"name": "Get subcategories",
+					"id": "8efa165e-c939-4695-844a-8188e338a479",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/subcategories?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subcategories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific subcategory",
+					"id": "c695e8ad-1529-4ad4-ab1f-1859d6950ad6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific subcategory",
+					"id": "1df7de55-0236-4780-b587-549d5fdff4fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific subcategory",
+					"id": "b1d42a3e-87b9-4c7c-98ea-c9027dd8d824",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/subcategories"
+					},
+					"response": []
+				}
+			],
+			"id": "d8a0e1fa-c967-48ee-a821-8469502f765d"
+		},
+		{
 			"name": "Categories/subs",
 			"item": [
 				{
