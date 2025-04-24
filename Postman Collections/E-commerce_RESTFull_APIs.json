@@ -512,10 +512,10 @@
 			"id": "9759f088-524f-4a5c-a992-09c39115e367"
 		},
 		{
-			"name": "Subcategories Copy",
+			"name": "Users",
 			"item": [
 				{
-					"name": "Create subcategory",
+					"name": "Create user",
 					"id": "612b3326-fd04-470f-823b-c886a4e0f01a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -535,7 +535,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/subcategories"
+						"url": "localhost:8000/api/users"
 					},
 					"response": []
 				},
