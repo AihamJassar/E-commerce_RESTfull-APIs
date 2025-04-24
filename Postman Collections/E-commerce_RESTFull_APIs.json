@@ -515,7 +515,7 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "Get users",
+					"name": "Create user",
 					"id": "8efa165e-c939-4695-844a-8188e338a479",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
