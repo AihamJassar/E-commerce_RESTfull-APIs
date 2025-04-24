@@ -579,7 +579,7 @@
 				},
 				{
 					"name": "Create user Copy",
-					"id": "6282b029-8d50-429b-8ce5-d930d84fdbd3",
+					"id": "d53a26b7-35f2-4b5e-9763-f0707a2b38dd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -641,7 +641,7 @@
 					"response": []
 				},
 				{
-					"name": "Get subcategories",
+					"name": "Get users",
 					"id": "8efa165e-c939-4695-844a-8188e338a479",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
