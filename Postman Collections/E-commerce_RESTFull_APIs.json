@@ -540,7 +540,7 @@
 						"auth": {
 							"type": "noauth"
 						},
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"url": "localhost:8000/api/users"
 					},
