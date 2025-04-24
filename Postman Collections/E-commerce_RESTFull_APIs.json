@@ -142,7 +142,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Summsung Galaxy S23\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"67f80e94dc66eb225e1319a7\",\r\n    \"subcategory\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
+							"raw": "{\r\n    \"title\": \"Summsung Galaxy 9yl9iuu90509i92\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"6806bf3ea2a96401c00d0438\",\r\n    //\"subcategories\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
