@@ -578,69 +578,6 @@
 					"response": []
 				},
 				{
-					"name": "Create user Copy",
-					"id": "d53a26b7-35f2-4b5e-9763-f0707a2b38dd",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Aiham Jassar",
-									"type": "text",
-									"uuid": "2ba827aa-4a36-4fb8-80ac-146c1b9c2f4d"
-								},
-								{
-									"key": "email",
-									"value": "aihamjassar@gmail.com",
-									"type": "text",
-									"uuid": "c8d71cd1-e785-496b-9313-b3174ef03e37"
-								},
-								{
-									"key": "phone",
-									"value": "123456789",
-									"type": "text",
-									"uuid": "77337085-bea1-4b1e-bac4-88e247b97c12"
-								},
-								{
-									"key": "password",
-									"value": "12345678",
-									"type": "text",
-									"uuid": "b2698b6f-35f5-498a-ad66-37e66da8fdec"
-								},
-								{
-									"key": "role",
-									"value": "admin",
-									"type": "text",
-									"uuid": "d05e6476-8ef9-4824-ab6d-915906efbc00"
-								},
-								{
-									"key": "active",
-									"value": "true",
-									"type": "text",
-									"uuid": "edda1f25-3ff8-47dc-a14f-2209707c24f7"
-								},
-								{
-									"key": "profileImage",
-									"type": "file",
-									"uuid": "ccd38c04-b8c3-45b6-a2cf-e7a23e3500b7",
-									"src": "/C:/Users/Aiham Jassar/Documents/tooles/Images/imgs/man-in-tailored-suit.jpg"
-								}
-							]
-						},
-						"url": "localhost:8000/api/users"
-					},
-					"response": []
-				},
-				{
 					"name": "Get users",
 					"id": "8efa165e-c939-4695-844a-8188e338a479",
 					"protocolProfileBehavior": {
@@ -673,7 +610,7 @@
 					"response": []
 				},
 				{
-					"name": "Get specific subcategory",
+					"name": "Get specific user",
 					"id": "c695e8ad-1529-4ad4-ab1f-1859d6950ad6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -684,12 +621,12 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
 					},
 					"response": []
 				},
 				{
-					"name": "Update specific subcategory",
+					"name": "Update specific user",
 					"id": "1df7de55-0236-4780-b587-549d5fdff4fc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -709,12 +646,12 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
 					},
 					"response": []
 				},
 				{
-					"name": "Delete specific subcategory",
+					"name": "Delete specific user",
 					"id": "b1d42a3e-87b9-4c7c-98ea-c9027dd8d824",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -725,7 +662,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8000/api/subcategories"
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
 					},
 					"response": []
 				}
