@@ -531,7 +531,7 @@
 					"response": []
 				},
 				{
-					"name": "Get users Copy",
+					"name": "Get users",
 					"id": "a9f21fda-93bc-4026-94dd-a753aea0f9be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
