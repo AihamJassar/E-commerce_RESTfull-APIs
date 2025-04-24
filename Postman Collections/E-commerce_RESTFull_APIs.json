@@ -597,7 +597,7 @@
 						"auth": {
 							"type": "noauth"
 						},
-						"method": "PUT",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
