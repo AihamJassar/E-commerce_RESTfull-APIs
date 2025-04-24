@@ -588,14 +588,27 @@
 					"response": []
 				},
 				{
-					"name": "Create User",
-					"id": "883fcf06-b135-4b10-80cc-8620b16e95ac",
+					"name": "Delete specific user",
+					"id": "708793cd-787f-4f29-b147-e8e9e985ab0a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
-						"header": []
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
 					},
 					"response": []
 				}
