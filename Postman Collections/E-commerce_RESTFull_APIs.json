@@ -524,25 +524,25 @@
 						"auth": {
 							"type": "noauth"
 						},
-						"method": "GET",
+						"method": "POST",
 						"header": [],
-						"url": {
-							"raw": "localhost:8000/api/subcategories?page=1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"subcategories"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								}
-							]
-						}
+						"url": "localhost:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get users Copy",
+					"id": "a9f21fda-93bc-4026-94dd-a753aea0f9be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8000/api/users"
 					},
 					"response": []
 				},
@@ -588,29 +588,13 @@
 					"response": []
 				},
 				{
-					"name": "Delete specific user",
-					"id": "b1d42a3e-87b9-4c7c-98ea-c9027dd8d824",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
+					"name": "Create User",
 					"id": "883fcf06-b135-4b10-80cc-8620b16e95ac",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": []
 					},
 					"response": []
