@@ -575,20 +575,37 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Aiham Mohammed",
+									"type": "text",
+									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "aihammohammed@gmail.comx",
+									"type": "text",
+									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678hK'",
+									"type": "text",
+									"uuid": "8f557bf5-99bf-4bef-91da-61d8b9a09198",
+									"disabled": true
 								}
-							}
+							]
 						},
-						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+						"url": "localhost:8000/api/users/680a6ec3dcb448ef4fb62af9"
 					},
 					"response": []
 				},
 				{
-					"name": "Update specific user Copy",
+					"name": "Change user password",
 					"id": "79eab73d-36aa-4d68-8193-1e8cd2f7dbf1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
