@@ -722,6 +722,28 @@
 						"url": "localhost:8000/api/auth/signup"
 					},
 					"response": []
+				},
+				{
+					"name": "Login",
+					"id": "a258c7d0-5090-4b2a-a215-38e47c4b3c7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\": 123456789\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/login"
+					},
+					"response": []
 				}
 			],
 			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
