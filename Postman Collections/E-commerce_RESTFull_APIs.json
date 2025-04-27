@@ -588,6 +588,31 @@
 					"response": []
 				},
 				{
+					"name": "Update specific user Copy",
+					"id": "79eab73d-36aa-4d68-8193-1e8cd2f7dbf1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
 					"name": "Delete specific user",
 					"id": "708793cd-787f-4f29-b147-e8e9e985ab0a",
 					"protocolProfileBehavior": {
