@@ -699,8 +699,22 @@
 			"id": "259a311d-fdda-4c2b-840c-c2457389ec2e"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"id": "2a52fae6-86e8-4bc3-bd3b-6c3d4a122517",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8000/api/auth/signup/680a6ec3dcb448ef4fb62af9"
+					},
+					"response": []
+				}
+			],
 			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
 		}
 	]
