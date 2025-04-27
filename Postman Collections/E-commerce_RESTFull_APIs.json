@@ -710,7 +710,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": "localhost:8000/api/auth/signup/680a6ec3dcb448ef4fb62af9"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\": 123456789,\r\n    \"passwordConformation\": 123456789\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/signup"
 					},
 					"response": []
 				}
