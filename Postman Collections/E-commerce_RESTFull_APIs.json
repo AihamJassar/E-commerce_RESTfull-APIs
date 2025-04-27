@@ -734,7 +734,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\": 123456789\r\n}",
+							"raw": "{\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\":\" [123456789aJ]\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
