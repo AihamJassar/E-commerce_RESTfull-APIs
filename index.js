@@ -6,9 +6,12 @@ const categoryRoute = require("./routers/categoryRoute");
 const subCategoryRoute = require("./routers/subCategoryRoute");
 const brandRoute = require("./routers/brandRoute");
 const productRoute = require("./routers/productRoute");
+const userRoute = require("./routers/userRoute");
+const authRoute = require("./routers/authRoute");
 const ApiError = require("./utils/apiError");
 const globalError = require("./middlewares/errorMiddleware");
 const qs = require("qs");
+const path = require("path");
 
 dotenv.config({ path: "config.env" });
 
@@ -27,6 +30,8 @@ app.use(express.json());
 
 app.set("query parser", (str) => qs.parse(str));
 
+app.use(express.static(path.join(__dirname, "uploads")));
+
 // Routes
 app.use("/api/categories", categoryRoute);
 
@@ -35,6 +40,10 @@ app.use("/api/subcategories", subCategoryRoute);
 app.use("/api/brands", brandRoute);
 
 app.use("/api/products", productRoute);
+
+app.use("/api/users", userRoute);
+
+app.use("/api/auth", authRoute);
 
 app.all("/{*splat}", (req, res, next) => {
   next(new ApiError(`Con't find this route ${req.originalUrl}`, 400));

@@ -1,5 +1,24 @@
+const asyncHandler = require("express-async-handler");
+const { v4: uuid4 } = require("uuid");
+const sharp = require("sharp");
 const Brand = require("../models/brandModel");
 const factory = require("./handlersFactory");
+const { uploadSingleImage } = require("../middlewares/uploadImageMiddleware");
+
+exports.uploadBrandImage = uploadSingleImage("image");
+
+exports.resizeImage = asyncHandler(async (req, res, next) => {
+  if (!req.file) return next();
+  const fileName = `brand-${uuid4()}-${Date.now()}.jpeg`;
+  await sharp(req.file.buffer)
+    .resize(600, 600)
+    .toFormat("jpeg")
+    .jpeg({ quality: 95 })
+    .toFile(`uploads/brands/${fileName}`);
+
+  req.body.image = fileName;
+  next();
+});
 
 // @desc Create brand
 // @route Post /api/brands/
