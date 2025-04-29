@@ -1,510 +1,530 @@
 {
-  "info": {
-    "_postman_id": "ad20274d-5deb-4bc8-b0c7-ae98d8d57fde",
-    "name": "E-commerce API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Categories",
-      "item": [
-        {
-          "name": "Create category",
-          "id": "f99b4823-5183-47ab-b59c-8d0f94a6c4a6",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"tools\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/categories"
-          },
-          "response": []
-        },
-        {
-          "name": "Get categories",
-          "id": "7227f64d-2729-4a43-96a0-1577930e1453",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8000/api/categories?page=1",
-              "host": ["localhost"],
-              "port": "8000",
-              "path": ["api", "categories"],
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Get specific category",
-          "id": "b25c550c-0d89-490a-a241-f251e2a3f23b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": "localhost:8000/api/categories/77f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Update specific category",
-          "id": "40c040dd-3c9e-4cd6-b87b-3cb5d87188e0",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/categories/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Delete specific category",
-          "id": "909921e6-5873-474d-8020-525ea2e2b25d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": "localhost:8000/api/categories"
-          },
-          "response": []
-        }
-      ],
-      "id": "abb31e3c-6351-49a2-91fb-d29443589359"
-    },
-    {
-      "name": "Products",
-      "item": [
-        {
-          "name": "Create Product",
-          "id": "756d8429-adea-40a9-bddd-aa51a99ef021",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"title\": \"Summsung Galaxy S23\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"67f80e94dc66eb225e1319a7\",\r\n    \"subcategory\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/products"
-          },
-          "response": []
-        },
-        {
-          "name": "Get Products",
-          "id": "8298cc58-9c6a-45f7-a489-006bfcba104a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8000/api/products?page=1",
-              "host": ["localhost"],
-              "port": "8000",
-              "path": ["api", "products"],
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Get specific Product",
-          "id": "6472d254-0c5d-4126-8a04-d8b6f26ea389",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": "localhost:8000/api/products/68040e8e4dbc4b302237011b"
-          },
-          "response": []
-        },
-        {
-          "name": "Update specific Product",
-          "id": "685ae8f9-75e3-4847-a345-b048777b0d73",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/products/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Delete specific Product",
-          "id": "5f9fe62a-ff63-4c2c-a546-a9da7c9b9034",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": "localhost:8000/api/products/68040e8e4dbc4b302237011b"
-          },
-          "response": []
-        }
-      ],
-      "id": "0bbb3eca-b831-43d7-beba-9a5a1daf636b"
-    },
-    {
-      "name": "Brands",
-      "item": [
-        {
-          "name": "Create brand",
-          "id": "190ac3e4-29de-4df2-bc91-ab113aaf3483",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"tools\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/brands"
-          },
-          "response": []
-        },
-        {
-          "name": "Get brands",
-          "id": "53805825-e9d1-4801-9140-0819fd403c74",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8000/api/brands?page=1",
-              "host": ["localhost"],
-              "port": "8000",
-              "path": ["api", "brands"],
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Get specific brand",
-          "id": "50af926d-8581-4cbc-8cf5-3b0052de9d9a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": "localhost:8000/api/brands/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Update specific brand",
-          "id": "8963f94f-7847-458f-8483-19030561cc8f",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/brands/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Delete specific brand",
-          "id": "1158bd95-ca19-4a00-bf29-ca226c26c847",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": "localhost:8000/api/brands"
-          },
-          "response": []
-        }
-      ],
-      "id": "a2e7809c-21a7-41d0-92a7-5326f42df321"
-    },
-    {
-      "name": "Subcategories",
-      "item": [
-        {
-          "name": "Create subcategory",
-          "id": "d98ba612-446d-4b58-98ae-ab826e6087ea",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"smats watches\",\r\n    \"category\": \"67f8363c08985b916d9a47de\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/subcategories"
-          },
-          "response": []
-        },
-        {
-          "name": "Get subcategories",
-          "id": "199516e5-a48a-4ddf-b049-ab357ccc759e",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "localhost:8000/api/subcategories?page=1",
-              "host": ["localhost"],
-              "port": "8000",
-              "path": ["api", "subcategories"],
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Get specific subcategory",
-          "id": "ccdad48d-5a9b-471e-99d2-03dce4347d73",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [],
-            "url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Update specific subcategory",
-          "id": "a888ec9e-b21b-461d-a51c-7a8dc1115bc2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
-          },
-          "response": []
-        },
-        {
-          "name": "Delete specific subcategory",
-          "id": "9e28e87c-59e4-4ca0-8640-9c6978f58f7f",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "DELETE",
-            "header": [],
-            "url": "localhost:8000/api/subcategories"
-          },
-          "response": []
-        }
-      ],
-      "id": "9759f088-524f-4a5c-a992-09c39115e367"
-    },
-    {
-      "name": "Categories/subs",
-      "item": [
-        {
-          "name": "Create subcategory on category",
-          "id": "49560fb7-d14f-4517-855a-770e1efeea13",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"name\": \"sub2\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "localhost:8000/api/categories/67f80e94dc66eb225e1319a7/subcategories"
-          },
-          "response": []
-        },
-        {
-          "name": "Get list of subcategories",
-          "id": "9f36d601-de61-4c53-af0d-53546ffc4b5b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": "localhost:8000/api/categories/6806bf3ea2a96401c00d0438/subcategories"
-          },
-          "response": []
-        }
-      ],
-      "id": "259a311d-fdda-4c2b-840c-c2457389ec2e"
-    }
-  ]
+	"info": {
+		"_postman_id": "ad20274d-5deb-4bc8-b0c7-ae98d8d57fde",
+		"name": "E-commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create category",
+					"id": "f99b4823-5183-47ab-b59c-8d0f94a6c4a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tools\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "Get categories",
+					"id": "7227f64d-2729-4a43-96a0-1577930e1453",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/categories?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific category",
+					"id": "b25c550c-0d89-490a-a241-f251e2a3f23b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/categories/77f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific category",
+					"id": "40c040dd-3c9e-4cd6-b87b-3cb5d87188e0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/categories/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific category",
+					"id": "909921e6-5873-474d-8020-525ea2e2b25d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/categories"
+					},
+					"response": []
+				}
+			],
+			"id": "abb31e3c-6351-49a2-91fb-d29443589359"
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"id": "756d8429-adea-40a9-bddd-aa51a99ef021",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Summsung Galaxy S23\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"67f80e94dc66eb225e1319a7\",\r\n    \"subcategory\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"id": "8298cc58-9c6a-45f7-a489-006bfcba104a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific Product",
+					"id": "6472d254-0c5d-4126-8a04-d8b6f26ea389",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/products/68040e8e4dbc4b302237011b"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific Product",
+					"id": "685ae8f9-75e3-4847-a345-b048777b0d73",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/products/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific Product",
+					"id": "5f9fe62a-ff63-4c2c-a546-a9da7c9b9034",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/products/68040e8e4dbc4b302237011b"
+					},
+					"response": []
+				}
+			],
+			"id": "0bbb3eca-b831-43d7-beba-9a5a1daf636b"
+		},
+		{
+			"name": "Brands",
+			"item": [
+				{
+					"name": "Create brand",
+					"id": "190ac3e4-29de-4df2-bc91-ab113aaf3483",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tools\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/brands"
+					},
+					"response": []
+				},
+				{
+					"name": "Get brands",
+					"id": "53805825-e9d1-4801-9140-0819fd403c74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/brands?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"brands"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific brand",
+					"id": "50af926d-8581-4cbc-8cf5-3b0052de9d9a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/brands/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific brand",
+					"id": "8963f94f-7847-458f-8483-19030561cc8f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/brands/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific brand",
+					"id": "1158bd95-ca19-4a00-bf29-ca226c26c847",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/brands"
+					},
+					"response": []
+				}
+			],
+			"id": "a2e7809c-21a7-41d0-92a7-5326f42df321"
+		},
+		{
+			"name": "Subcategories",
+			"item": [
+				{
+					"name": "Create subcategory",
+					"id": "d98ba612-446d-4b58-98ae-ab826e6087ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"smats watches\",\r\n    \"category\": \"67f8363c08985b916d9a47de\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/subcategories"
+					},
+					"response": []
+				},
+				{
+					"name": "Get subcategories",
+					"id": "199516e5-a48a-4ddf-b049-ab357ccc759e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/subcategories?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subcategories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific subcategory",
+					"id": "ccdad48d-5a9b-471e-99d2-03dce4347d73",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific subcategory",
+					"id": "a888ec9e-b21b-461d-a51c-7a8dc1115bc2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/subcategories/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific subcategory",
+					"id": "9e28e87c-59e4-4ca0-8640-9c6978f58f7f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8000/api/subcategories"
+					},
+					"response": []
+				}
+			],
+			"id": "9759f088-524f-4a5c-a992-09c39115e367"
+		},
+		{
+			"name": "Categories/subs",
+			"item": [
+				{
+					"name": "Create subcategory on category",
+					"id": "49560fb7-d14f-4517-855a-770e1efeea13",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sub2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/categories/67f80e94dc66eb225e1319a7/subcategories"
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of subcategories",
+					"id": "9f36d601-de61-4c53-af0d-53546ffc4b5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/categories/6806bf3ea2a96401c00d0438/subcategories"
+					},
+					"response": []
+				}
+			],
+			"id": "259a311d-fdda-4c2b-840c-c2457389ec2e"
+		}
+	]
 }
