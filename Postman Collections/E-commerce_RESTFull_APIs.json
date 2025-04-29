@@ -702,6 +702,19 @@
 			"item": [
 				{
 					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "91497e87-b1bc-471d-8802-aa686832681d",
+								"exec": [
+									"pm.environment.set(\"JWT\", ps.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "2a52fae6-86e8-4bc3-bd3b-6c3d4a122517",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -711,7 +724,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\": 123456789,\r\n    \"passwordConformation\": 123456789\r\n}",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"aihamauthk@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -724,6 +737,19 @@
 				},
 				{
 					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
+								"exec": [
+									"pm.environment.set(\"JWT\", ps.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "a258c7d0-5090-4b2a-a215-38e47c4b3c7d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
