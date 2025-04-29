@@ -130,26 +130,42 @@
 			"item": [
 				{
 					"name": "Create Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ddc4cec4-0b94-4454-84d0-d337d27eabad",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "756d8429-adea-40a9-bddd-aa51a99ef021",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Summsung Galaxy 9yl9iuu90509i92\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"6806bf3ea2a96401c00d0438\",\r\n    //\"subcategories\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
+							"raw": "{\r\n    \"title\": \"Summsung Galaxy 9yl9iuu90509i92l\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"6806bf3ea2a96401c00d0438\",\r\n    //\"subcategories\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/api/products"
+						"url": "localhost:3000/api/products"
 					},
 					"response": []
 				},
@@ -166,7 +182,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/products?page=1",
+							"raw": "{{URL}}/api/products?page=2",
 							"host": [
 								"{{URL}}"
 							],
@@ -177,7 +193,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -541,7 +557,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8000/api/users"
+						"url": "{{URL}}/api/users"
 					},
 					"response": []
 				},
@@ -589,17 +605,10 @@
 									"type": "text",
 									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68",
 									"disabled": true
-								},
-								{
-									"key": "password",
-									"value": "12345678hK'",
-									"type": "text",
-									"uuid": "8f557bf5-99bf-4bef-91da-61d8b9a09198",
-									"disabled": true
 								}
 							]
 						},
-						"url": "localhost:8000/api/users/680a6ec3dcb448ef4fb62af9"
+						"url": "localhost:8000/api/users/6810adbe7957ff43fed98c0a"
 					},
 					"response": []
 				},
@@ -617,14 +626,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n    \"currentPassword\": \"lF234rweqqf.f\",\r\n    \"password\": \"KJIUU79988:l\",\r\n    \"passwordConfirm\": \"KJIUU79988:l\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+						"url": "localhost:8000/api/users/changePassword/6810adbe7957ff43fed98c0a"
 					},
 					"response": []
 				},
@@ -724,7 +733,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"aihamauthk7l@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"KKkLKJjJHII@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -743,7 +752,7 @@
 							"script": {
 								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
 								"exec": [
-									"pm.environment.set(\"JWT\", ps.response.json().token);"
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -759,7 +768,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"aihamauth@gmail.com\",\r\n    \"password\":\" [123456789aJ]\"\r\n}",
+							"raw": "{\r\n    \"email\": \"aihamauthk7l@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
