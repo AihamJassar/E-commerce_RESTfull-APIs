@@ -130,19 +130,35 @@
 			"item": [
 				{
 					"name": "Create Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ddc4cec4-0b94-4454-84d0-d337d27eabad",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "756d8429-adea-40a9-bddd-aa51a99ef021",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Summsung Galaxy S23\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"67f80e94dc66eb225e1319a7\",\r\n    \"subcategory\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
+							"raw": "{\r\n    \"title\": \"Summsung Galaxy 9yl9iuu90509i92l\",\r\n    \"description\": \"This is description....\",\r\n    \"quantity\": 20,\r\n    \"sold\": 0,\r\n    \"price\": 100,\r\n    \"priceAfterDiscount\": 80,\r\n    \"colors\": [\"Red\", \"Blue\", \"Black\"],\r\n    \"imageCover\": \"https://images/img-01\",\r\n    \"images\": [\"https://images/img-02\", \"https://images/img-03\"],\r\n    \"category\": \"6806bf3ea2a96401c00d0438\",\r\n    //\"subcategories\": [\"68002afe5136d68a6d15997f\"],\r\n    \"brand\": \"6800dad499dd242988068753\",\r\n    \"ratingsAverage\": 1,\r\n    \"ratingsQuantity\": 0\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -166,11 +182,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/products?page=1",
+							"raw": "{{URL}}/api/products?page=2",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"products"
@@ -178,7 +193,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -261,15 +276,41 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"tools\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"type": "text",
+									"uuid": "76661fc9-cdbc-4f02-938f-db83a10e604d",
+									"value": "new brand"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"uuid": "87e12cc4-6f80-4a8a-8cbf-43f9bc62a1b3",
+									"src": "postman-cloud:///1f01fba6-9edd-4de0-a8b8-d98e555ff650"
 								}
-							}
+							]
 						},
-						"url": "localhost:8000/api/brands"
+						"url": {
+							"raw": "localhost:3000/api/brands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"brands"
+							],
+							"query": [
+								{
+									"key": "image",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -486,6 +527,145 @@
 			"id": "9759f088-524f-4a5c-a992-09c39115e367"
 		},
 		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create user",
+					"id": "8efa165e-c939-4695-844a-8188e338a479",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"id": "a9f21fda-93bc-4026-94dd-a753aea0f9be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific user",
+					"id": "c695e8ad-1529-4ad4-ab1f-1859d6950ad6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific user",
+					"id": "1df7de55-0236-4780-b587-549d5fdff4fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Aiham Mohammed",
+									"type": "text",
+									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "aihammohammed@gmail.comx",
+									"type": "text",
+									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68",
+									"disabled": true
+								}
+							]
+						},
+						"url": "localhost:8000/api/users/6810adbe7957ff43fed98c0a"
+					},
+					"response": []
+				},
+				{
+					"name": "Change user password",
+					"id": "79eab73d-36aa-4d68-8193-1e8cd2f7dbf1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\": \"lF234rweqqf.f\",\r\n    \"password\": \"KJIUU79988:l\",\r\n    \"passwordConfirm\": \"KJIUU79988:l\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/changePassword/6810adbe7957ff43fed98c0a"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific user",
+					"id": "708793cd-787f-4f29-b147-e8e9e985ab0a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				}
+			],
+			"id": "d8a0e1fa-c967-48ee-a821-8469502f765d"
+		},
+		{
 			"name": "Categories/subs",
 			"item": [
 				{
@@ -525,6 +705,82 @@
 				}
 			],
 			"id": "259a311d-fdda-4c2b-840c-c2457389ec2e"
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "91497e87-b1bc-471d-8802-aa686832681d",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "2a52fae6-86e8-4bc3-bd3b-6c3d4a122517",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"KKkLKJjJjHII@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "a258c7d0-5090-4b2a-a215-38e47c4b3c7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aihamauthk7l@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/login"
+					},
+					"response": []
+				}
+			],
+			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
 		}
 	]
 }
