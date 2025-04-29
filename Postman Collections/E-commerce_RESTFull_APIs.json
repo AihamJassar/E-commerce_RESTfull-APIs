@@ -618,7 +618,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
