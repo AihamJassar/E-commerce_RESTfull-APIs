@@ -166,11 +166,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/products?page=1",
+							"raw": "{{URL}}/api/products?page=1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"products"
