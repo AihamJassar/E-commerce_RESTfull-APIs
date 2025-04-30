@@ -585,19 +585,35 @@
 				},
 				{
 					"name": "Update logged user password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "67327193-4eb5-4565-819a-184dd20d1832",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "79eab73d-36aa-4d68-8193-1e8cd2f7dbf1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
 						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"currentPassword\": \"lF234rweqqf.f\",\r\n    \"password\": \"KJIUU79988:l\",\r\n    \"passwordConfirm\": \"KJIUU79988:l\"\r\n}",
+							"raw": "{\r\n    \"password\": \"12KJIUU79988:l\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -861,7 +877,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar2@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar27@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -896,7 +912,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"email\": \"ayhamgassar2@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\"\r\n}",
+							"raw": "{\r\n     \"email\": \"ayhamgassar27@gmail.com\",\r\n    \"password\": \"1KJIUU79988:l\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
