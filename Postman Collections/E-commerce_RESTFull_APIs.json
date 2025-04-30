@@ -557,7 +557,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{URL}}/api/users"
+						"url": "{{URL}}/api/users/getMe"
 					},
 					"response": []
 				},
@@ -664,6 +664,145 @@
 				}
 			],
 			"id": "d8a0e1fa-c967-48ee-a821-8469502f765d"
+		},
+		{
+			"name": "Users admin",
+			"item": [
+				{
+					"name": "Create user",
+					"id": "43c4eced-6a2b-4d0d-92bf-84c294b81d2c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"id": "dfef9ea4-a370-4e7d-9238-bedeff71e979",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific user",
+					"id": "34aeb900-fce8-4e0c-aed0-7d7b46f610ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update specific user",
+					"id": "608f0564-4d5b-439c-b64b-e22c4c47787b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Aiham Mohammed",
+									"type": "text",
+									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "aihammohammed@gmail.comx",
+									"type": "text",
+									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68",
+									"disabled": true
+								}
+							]
+						},
+						"url": "localhost:8000/api/users/6810adbe7957ff43fed98c0a"
+					},
+					"response": []
+				},
+				{
+					"name": "Change user password",
+					"id": "591785af-9dfd-4368-90a4-f48efc94febc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\": \"lF234rweqqf.f\",\r\n    \"password\": \"KJIUU79988:l\",\r\n    \"passwordConfirm\": \"KJIUU79988:l\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/changePassword/6810adbe7957ff43fed98c0a"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific user",
+					"id": "28e473ad-296d-42e8-a5e7-867b46a24a0e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				}
+			],
+			"id": "fac69bad-1c0c-4f6e-bb68-254d126f6a1e"
 		},
 		{
 			"name": "Categories/subs",
