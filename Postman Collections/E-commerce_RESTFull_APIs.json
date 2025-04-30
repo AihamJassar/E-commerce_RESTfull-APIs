@@ -530,23 +530,7 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "Create user",
-					"id": "8efa165e-c939-4695-844a-8188e338a479",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"url": "localhost:8000/api/users"
-					},
-					"response": []
-				},
-				{
-					"name": "Get users",
+					"name": "Get me",
 					"id": "a9f21fda-93bc-4026-94dd-a753aea0f9be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -561,22 +545,6 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{URL}}/api/users/getMe"
-					},
-					"response": []
-				},
-				{
-					"name": "Get specific user",
-					"id": "c695e8ad-1529-4ad4-ab1f-1859d6950ad6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
 					},
 					"response": []
 				},
