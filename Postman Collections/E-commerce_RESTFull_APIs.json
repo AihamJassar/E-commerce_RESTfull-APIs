@@ -616,7 +616,7 @@
 					"response": []
 				},
 				{
-					"name": "Change user password",
+					"name": "Update logged user password",
 					"id": "79eab73d-36aa-4d68-8193-1e8cd2f7dbf1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -636,7 +636,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/users/changePassword/6810adbe7957ff43fed98c0a"
+						"url": "localhost:8000/api/users/changeMyPassword"
 					},
 					"response": []
 				},
