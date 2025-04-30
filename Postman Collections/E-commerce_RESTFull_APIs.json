@@ -813,6 +813,41 @@
 						"url": "localhost:8000/api/auth/forgotPassword"
 					},
 					"response": []
+				},
+				{
+					"name": "Verify reset code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "44009c96-9962-4fab-8485-2443b362acfa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resetCode\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/verifyResetCode"
+					},
+					"response": []
 				}
 			],
 			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
