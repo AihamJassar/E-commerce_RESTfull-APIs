@@ -778,6 +778,41 @@
 						"url": "localhost:8000/api/auth/login"
 					},
 					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "c7e4d3dc-3205-4a9a-b116-beb26cfbaf9f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aihamauthk7l@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/auth/forgotPassword"
+					},
+					"response": []
 				}
 			],
 			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
