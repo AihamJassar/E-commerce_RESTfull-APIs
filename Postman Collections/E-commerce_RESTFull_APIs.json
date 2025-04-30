@@ -857,7 +857,7 @@
 							"script": {
 								"id": "cda616dd-6dc8-4243-b655-36b6c96d8087",
 								"exec": [
-									"pm.environment.set(\"JWT\", pm.response.json().token);"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -869,18 +869,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"resetCode\": \"123456\"\r\n}",
+							"raw": "{\r\n    \"email\": \"ayhamgassar@gmail.com\",\r\n    \"newPasswor\": \"123456qW?\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8000/api/auth/verifyResetCode"
+						"url": "localhost:8000/api/auth/resetPassword"
 					},
 					"response": []
 				}
