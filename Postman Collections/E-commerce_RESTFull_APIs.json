@@ -838,7 +838,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"resetCode\": \"5416843\"\r\n}",
+							"raw": "{\r\n    \"resetCode\": \"2784279\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -873,7 +873,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"ayhamgassar@gmail.com\",\r\n    \"newPasswor\": \"123456qW?\"\r\n}",
+							"raw": "{\r\n    \"email\": \"ayhamgassar@gmail.com\",\r\n    \"newPassword\": \"123456789\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
