@@ -590,7 +590,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete specific user",
+					"name": "Delete me",
 					"id": "708793cd-787f-4f29-b147-e8e9e985ab0a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
