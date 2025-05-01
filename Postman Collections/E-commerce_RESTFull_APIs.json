@@ -549,14 +549,17 @@
 					"response": []
 				},
 				{
-					"name": "Update specific user",
+					"name": "Update  me",
 					"id": "1df7de55-0236-4780-b587-549d5fdff4fc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
 						},
 						"method": "PUT",
 						"header": [],
@@ -567,19 +570,23 @@
 									"key": "name",
 									"value": "Aiham Mohammed",
 									"type": "text",
-									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e",
-									"disabled": true
+									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e"
 								},
 								{
 									"key": "email",
 									"value": "aihammohammed@gmail.comx",
 									"type": "text",
-									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68",
-									"disabled": true
+									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68"
+								},
+								{
+									"key": "phone",
+									"value": "779082646",
+									"type": "text",
+									"uuid": "85b6fd2f-904c-40bc-9ec3-7bfb8e1dd7ef"
 								}
 							]
 						},
-						"url": "localhost:8000/api/users/6810adbe7957ff43fed98c0a"
+						"url": "localhost:8000/api/users/updateMe"
 					},
 					"response": []
 				},
