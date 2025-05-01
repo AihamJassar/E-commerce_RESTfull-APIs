@@ -1026,19 +1026,6 @@
 				}
 			],
 			"id": "d8ed584e-7515-47dc-b71b-a2c7d51c623c"
-		},
-		{
-			"name": "New Request",
-			"id": "4bd66c71-c939-49c4-82b5-cceb9ce767b6",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": "https://postman-echo.com/post"
-			},
-			"response": []
 		}
 	]
 }
