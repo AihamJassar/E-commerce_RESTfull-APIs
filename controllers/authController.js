@@ -1,13 +1,12 @@
+const crypto = require("crypto");
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const ApiError = require("../utils/apiError");
+const sendEmail = require("../utils/sendEmail");
+const createToken = require("../utils/createToken")
 
-const createToken = (payload) =>
-  jwt.sign({ userId: payload }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
-  });
 
 exports.signup = asyncHandler(async (req, res, next) => {
   const user = await User.create({
@@ -83,3 +82,74 @@ exports.allowedTo = (...roles) =>
     }
     next();
   });
+
+exports.forgotPassword = asyncHandler(async (req, res, next) => {
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return next(
+      new ApiError(`There is no user with that email ${req.body.email}`, 404)
+    );
+  }
+  const resetCode = Math.floor(1000000 + Math.random() * 9000000).toString();
+  const hashedResetCode = crypto
+    .createHash("sha256")
+    .update(resetCode)
+    .digest("hex");
+  user.passwordResetCode = hashedResetCode;
+  user.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+  user.passwordResetVerified = false;
+  await user.save();
+  const message = `Hi ${user.name},\n We received a request to reset the password on your E-shop Account. \n ${resetCode} \n Enter this code to complete the reset. \n Thanks for helping us keep your account secure.\n The E-shop Team`;
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: `Your password reset code (valid for 10 min)`,
+      message,
+    });
+  } catch (err) {
+    user.passwordResetCode = undefined;
+    user.passwordResetExpires = undefined;
+    user.passwordResetVerified = undefined;
+    await user.save();
+    return next(new ApiError(err.message, 500));
+  }
+  res
+    .status(200)
+    .json({ status: "Success", message: "Reset code sent to email" });
+});
+
+exports.verifyPassResetCode = asyncHandler(async (req, res, next) => {
+  const hashedResetCode = crypto
+    .createHash("sha256")
+    .update(req.body.resetCode)
+    .digest("hex");
+  const user = await User.findOne({
+    passwordResetCode: hashedResetCode,
+    passwordResetExpires: { $gt: Date.now() },
+  });
+  if (!user) {
+    return next(new ApiError("Reset code invalid or expired"));
+  }
+  user.passwordResetVerified = true;
+  await user.save();
+  res.status(200).json({ status: "Success" });
+});
+
+exports.resetPassword = asyncHandler(async (req, res, next) => {
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return next(
+      new ApiError(`There is no user with email ${req.body.email}`, 404)
+    );
+  }
+  if (!user.passwordResetVerified) {
+    return next(new ApiError(`Reset code not verify`), 400);
+  }
+  user.password = req.body.newPassword;
+  user.passwordResetCode = undefined;
+  user.passwordResetExpires = undefined;
+  user.passwordResetVerified = undefined;
+  await user.save();
+  const token = createToken(user._id);
+  res.status(200).json({ token });
+});

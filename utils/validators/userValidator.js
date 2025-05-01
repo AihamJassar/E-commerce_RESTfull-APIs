@@ -120,3 +120,28 @@ exports.deleteUserValidator = [
   check("id").isMongoId().withMessage("Invalid id"),
   validatorMiddleware,
 ];
+
+exports.updateLoggedUserValidator = [
+  body("name").custom((val, { req }) => {
+    req.body.slug = slugify(val);
+    return true;
+  }),
+  check("email")
+    .notEmpty()
+    .withMessage("E-mail required")
+    .isEmail()
+    .withMessage("Invalid e-mail")
+    .custom(async (val) => {
+      const user = await User.findOne({ email: val });
+      if (user) {
+        return Promise.reject(new Error("E-mail already in use"));
+      }
+    }),
+  check("phone")
+    .optional()
+    .isMobilePhone(["ar-YE", "ar-SA"])
+    .withMessage("Invalid phone number"),
+  check("role").optional(),
+  check("profileImage").optional(),
+  validatorMiddleware,
+];

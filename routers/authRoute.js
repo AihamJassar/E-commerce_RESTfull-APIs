@@ -4,10 +4,22 @@ const {
   loginValidator,
 } = require("../utils/validators/authValidator");
 
-const { signup, login } = require("../controllers/authController");
+const {
+  signup,
+  login,
+  forgotPassword,
+  verifyPassResetCode,
+  resetPassword
+} = require("../controllers/authController");
 
-router.route("/signup").post(signupValidator, signup);
+router.post("/signup", signupValidator, signup);
 
-router.route("/login").post(loginValidator, login);
+router.post("/login", loginValidator, login);
+
+router.post("/forgotPassword", forgotPassword);
+
+router.post("/verifyResetCode", verifyPassResetCode);
+
+router.put("/resetPassword", resetPassword);
 
 module.exports = router;
