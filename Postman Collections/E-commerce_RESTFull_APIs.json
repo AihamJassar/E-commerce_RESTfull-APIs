@@ -873,7 +873,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar27227@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar2j7227@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1021,6 +1021,19 @@
 							}
 						},
 						"url": "localhost:8000/api/auth/resetPassword"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "ecb1cdf0-e411-4ed7-aec0-bf2c67c9d58e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/users/getMe"
 					},
 					"response": []
 				}
