@@ -597,7 +597,10 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
 						},
 						"method": "DELETE",
 						"header": [],
@@ -610,7 +613,7 @@
 								}
 							}
 						},
-						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+						"url": "localhost:8000/api/users/deleteMe"
 					},
 					"response": []
 				},
@@ -621,9 +624,24 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
+						},
 						"method": "PUT",
 						"header": [],
-						"url": "localhost:7600/api/users//updateMe"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"aiham aaaa\",\r\n    \"email\": \"aihamuiu@gmail.com\",\r\n    \"phone\": \"776854321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/users/updateMe"
 					},
 					"response": []
 				}
