@@ -549,48 +549,6 @@
 					"response": []
 				},
 				{
-					"name": "Update  me",
-					"id": "1df7de55-0236-4780-b587-549d5fdff4fc",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{JWT}}"
-							}
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Aiham Mohammed",
-									"type": "text",
-									"uuid": "2e4c6db1-17bf-433d-9d14-e48212deeb1e"
-								},
-								{
-									"key": "email",
-									"value": "aihammohammed@gmail.comx",
-									"type": "text",
-									"uuid": "4e65a5ae-fba7-4c49-838d-c337389d2c68"
-								},
-								{
-									"key": "phone",
-									"value": "779082646",
-									"type": "text",
-									"uuid": "85b6fd2f-904c-40bc-9ec3-7bfb8e1dd7ef"
-								}
-							]
-						},
-						"url": "localhost:8000/api/users/updateMe"
-					},
-					"response": []
-				},
-				{
 					"name": "Update logged user password",
 					"event": [
 						{
@@ -653,6 +611,19 @@
 							}
 						},
 						"url": "localhost:8000/api/users/67f80e94dc66eb225e1319a7"
+					},
+					"response": []
+				},
+				{
+					"name": "Update me",
+					"id": "40087778-4558-42b6-8937-54d930824d23",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:7600/api/users//updateMe"
 					},
 					"response": []
 				}
