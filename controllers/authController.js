@@ -5,8 +5,8 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const ApiError = require("../utils/apiError");
 const sendEmail = require("../utils/sendEmail");
-const createToken = require("../utils/createToken")
-
+const createToken = require("../utils/createToken");
+const { sanitizeUser } = require("../utils/sanitizeData");
 
 exports.signup = asyncHandler(async (req, res, next) => {
   const user = await User.create({
@@ -17,7 +17,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
   const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE,
   });
-  res.status(201).json({ data: user, token });
+  res.status(201).json({ data: sanitizeUser(user), token });
 });
 
 exports.login = asyncHandler(async (req, res, next) => {
@@ -26,7 +26,7 @@ exports.login = asyncHandler(async (req, res, next) => {
     return next(new ApiError("Incorrect email or password", 401));
   }
   const token = createToken(user._id);
-  res.status(201).json({ data: user, token });
+  res.status(201).json({ data: sanitizeUser(user), token });
 });
 
 exports.protect = asyncHandler(async (req, res, next) => {
