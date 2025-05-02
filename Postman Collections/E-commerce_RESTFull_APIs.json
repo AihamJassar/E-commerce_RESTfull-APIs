@@ -182,7 +182,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/products?page=2",
+							"raw": "{{URL}}/api/products?page=1&sort=price&price[lt]=100",
 							"host": [
 								"{{URL}}"
 							],
@@ -193,7 +193,17 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "2"
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "price",
+									"type": "text"
+								},
+								{
+									"key": "price[lt]",
+									"value": "100",
+									"type": "text"
 								}
 							]
 						}
@@ -873,7 +883,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar2j7227@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Aiham auth\",\r\n    \"email\": \"ayhamgassar2j7l22l7@gmail.com\",\r\n    \"password\": \"lknjkjkjljl'K777\",\r\n    \"passwordConformation\": \"lknjkjkjljl'K777\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
